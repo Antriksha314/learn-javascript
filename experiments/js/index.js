@@ -309,6 +309,68 @@ if (a === z || isTrue) {
 // reduce
 // const sum = list.reduce((runn, curr) => runn +curr, 0)
 
-
 // DOM -> Document object model
 
+const red = document.querySelector(".className");
+
+//  select first tag of similar classname only
+const id = document.getElementById("ID");
+
+// $0 give selected element by inspect
+
+// Array.from('h2') conver all h2 in array
+
+// classList gives list of class
+// like $0.classList
+// add or remove other classnames
+
+document.getElementById("h2").classList.add(".className");
+
+document.body.classList.add("");
+
+document.querySelectorAll("h2");
+
+// Events and Listners
+
+const button = document.querySelector(".buutonClassName");
+
+// Click event
+button.addEventListener("click", function () {
+  alert("Hey there");
+});
+
+// Keyup events
+// const input = document.querySelector('input')
+
+// const para = document.querySelector('p')
+// input.addEventListener('keyup', function(event){
+// para.innerText = event.target.value
+// })
+
+const input = document.querySelector(".input-to-copy");
+const paragraph = document.querySelector(".p-to-copy-to");
+
+input.addEventListener("keyup", function () {
+  paragraph.innerText = input.value;
+});
+
+// change event
+// type somthing is change
+const input2 = document.querySelector(".color-input");
+const paragraph2 = document.querySelector(".color-box");
+
+input2.addEventListener("change", function () {
+  paragraph2.style.backgroundColor = input2.value;
+});
+// peru
+
+// Event Delegation
+// Event on all or bubbling events
+document
+  .querySelector(".button-container")
+  .addEventListener("click", function (event) {
+    if (event.target.tagName === "BUTTON") {
+      alert(`You clicked on button ${event.target.innerText}`);
+    }
+    event.currentTarget.style.backgroundColor = "peru";
+  });
